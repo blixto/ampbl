@@ -19,3 +19,5 @@ if (pow(2.0, 3.0) >= 6)
     return "Greater";
 else
     return "Smaller";
+
+This is a work in progress, so some code pieces in the DataFuncs.ps1 are going tobe bogus or test stuff. But, overall, the code is kind of pretty. It may be of some curiosity to you. You're welcome to tinker about with it.
