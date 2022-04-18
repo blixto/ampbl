@@ -7,6 +7,10 @@ This niche language was created to facilitate the translation of '|' separated f
 
 The parser reads strings in the format (OP;OPERAND1;OPERAND2;...;OPERANDK) and returns the result to the caller. There is a handful of built in relational and arithmetic operators, a conditional operator (but no loops), and a sequential operator that its only job is to parse each of its fields in sequence until its end, which provides a way of building little programs with it.
 
+There is also a stack, and some stack operations ("POP" and PUSH, but "POP" does not removes the value from the stack).
+
+The entirety of the parsing code is in the file DataFuncs.ps1.
+
 The example that comes with this repository in Main.ps1 is a little and rather inefficient program to decide whether a number is prime or not by taking its modulo against the nmbers 2, 3, 5 and 7.
 
 Ex.:
