@@ -13,15 +13,30 @@ The entirety of the parsing code is in the file DataFuncs.ps1.
 
 The example that comes with this repository in Main.ps1 is a little and rather inefficient program to decide whether a number is prime or not by taking its modulo against the nmbers 2, 3, 5 and 7.
 
-Ex.:
+Below is the code listing in a more tractable indented format:
 
-(?;(>=;(^;%2;%3);%6);%Greater;%Smaller)
+    (!;
+        (->;%~~~);
+        (->;%11011);
+        (->;%2;%3;%5;%7);
+        (->;
+            (?;(@;(==;(<-;%0);(<-;%1));(==;(<-;%0);(<-;%2));(==;(<-;%0);(<-;%3));(==;(<-;%0);(<-;%4)));%Prime;
+                (?;(@;(==;(<-;%0);%1);(==;(<-;%0);%1));%Not Prime;
+                    (?;(!=;(//;(<-;%0);(<-;%1));%0);
+                        (?;(!=;(//;(<-;%0);(<-;%2));%0);
+                        (?;(!=;(//;(<-;%0);(<-;%3));%0);
+                            (?;(!=;(<-;%0);(<-;%4));%Prime;%Not Prime);%Not Prime);%Not Prime);%Not Prime)));
+        (§;(<-;%0));(§;%is);(§;(<-;%5)))
 
-This is equivalent (in C) to:
+To try and read the code, consider that...
 
-if (pow(2.0, 3.0) >= 6)
-    return "Greater";
-else
-    return "Smaller";
+    (?;(>=;(^;%2;%3);%6);%Greater;%Smaller)
+
+...is equivalent (in C) to:
+
+    if (pow(2.0, 3.0) >= 6)
+        return "Greater";
+    else
+        return "Smaller";
 
 This is a work in progress, so some code pieces in the DataFuncs.ps1 are going tobe bogus or test stuff. But, overall, the code is kind of pretty. It may be of some curiosity to you. You're welcome to tinker about with it.
