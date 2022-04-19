@@ -26,7 +26,9 @@ Below is the code listing in a more tractable indented format:
                         (?;(!=;(//;(<-;%0);(<-;%2));%0);
                         (?;(!=;(//;(<-;%0);(<-;%3));%0);
                             (?;(!=;(<-;%0);(<-;%4));%Prime;%Not Prime);%Not Prime);%Not Prime);%Not Prime)));
-        (§;(<-;%0));(§;%is);(§;(<-;%5)))
+        (§;(<-;%0));
+        (§;%is);
+        (§;(<-;%5)))
 
 To try and read the code, consider that...
 
